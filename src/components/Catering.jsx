@@ -14,7 +14,7 @@ export default function Catering() {
           Catering
         </h1>
         <p className="text-sm">
-          We can cater for your office parties, birthdays and events.
+          We can cater your office parties, birthdays and events.
         </p>
         <span className="underline underline-offset-2 decoration-white text-sm text-green-800 drop-shadow-2xl">
           <a
