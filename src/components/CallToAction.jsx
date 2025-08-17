@@ -1,5 +1,5 @@
 // import { CarouselOrientation } from "./Carousel";
-import birdsEyeImg from "../assets/birds-eye-img.jpg";
+import birdsEyeImg from "../assets/birds-eye-img.JPG";
 
 export default function CallToActionBtns() {
   return (

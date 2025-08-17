@@ -1,4 +1,4 @@
-import cafeLogo from '../assets/cafe-logo-shadow.PNG'
+import cafeLogo from '../assets/cafe-logo-shadow.png'
 
 export default function Header() {
     return (
