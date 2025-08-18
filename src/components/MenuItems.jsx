@@ -23,7 +23,7 @@ const sandwichesArr = [
   {
     key: uuid(),
     name: "Smash Burgers",
-    filling: "succulent beef - med/hot spicy ",
+    filling: "med/hot spicy beef - cheese  ",
     price: 5,
   },
   {
