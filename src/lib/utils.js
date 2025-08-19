@@ -12,7 +12,7 @@ export async function trackEvent(event_name, button_id, subdomain) {
     body: JSON.stringify({
       event_name,
       button_id,
-      subdomain_name,
+      subdomain,
     }),
   });
 }
