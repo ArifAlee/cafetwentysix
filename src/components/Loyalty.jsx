@@ -1,4 +1,4 @@
-import burdi from "../assets/burdi.PNG"
+import burdi from "../assets/burdi.png"
 export default function Loyalty(){
     const color = {color:"#01AAE6"}
     return (
