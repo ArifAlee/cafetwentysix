@@ -8,6 +8,7 @@ import ViewMenuBtn from "./components/ViewMenuBtn";
 import FindUs from "./components/FindUs";
 import Loyalty from "./components/Loyalty";
 import Footer from "./components/Footer";
+import Review from "./components/Review";
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
     <div className="bg-[var(--bgColor)] max-w-6xl h-auto m-auto lg:border border-white shadow-2xl">
       <Header />
       <Hero />
+      <Review />
       <CallToAction />
       <MenuItems />
       <ViewMenuBtn />

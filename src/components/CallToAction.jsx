@@ -1,7 +1,6 @@
 // import { CarouselOrientation } from "./Carousel";
 import birdsEyeImg from "../assets/birds-eye-img.JPG";
 import { trackEvent } from "@/lib/utils";
-
 export default function CallToActionBtns() {
   return (
     <>
