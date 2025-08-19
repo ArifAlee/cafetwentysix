@@ -16,7 +16,9 @@ export default function ViewMenuBtn() {
         alt="Sandwich and Milkshake"
         className="relative inset-0 h-25 object-cover brightness-75 flex-1/2"
       />
-      <button className="absolute rounded-lg px-11 py-1 text-center bg-gray-50 text-black text-sm cursor-pointer hover:bg-zinc-800 hover:text-white drop-shadow-sm hover:drop-shadow-md hover:scale-105 transition-all duration-400">
+      <button 
+      onClick={() => track("view-menu-btn", {subdomain: "cafetwentsix"})}
+      className="absolute rounded-lg px-11 py-1 text-center bg-gray-50 text-black text-sm cursor-pointer hover:bg-zinc-800 hover:text-white drop-shadow-sm hover:drop-shadow-md hover:scale-105 transition-all duration-400">
         <a href="#" aria-label="View the full menu">
           {" "}
           View Full Menu{" "}

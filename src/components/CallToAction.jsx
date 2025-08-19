@@ -1,13 +1,8 @@
 // import { CarouselOrientation } from "./Carousel";
+import { useEffect } from "react";
 import birdsEyeImg from "../assets/birds-eye-img.JPG";
-import { trackEvent } from "@/lib/utils";
-import { track } from "@vercel/analytics";
+import { track,  } from "@vercel/analytics";
 
-function handleClicks() {
-  return (
-    track("button_clicked"), trackEvent("click", "call_button", "cafetwentysix")
-)
-}
 export default function CallToActionBtns() {
   return (
     <>
@@ -19,7 +14,7 @@ export default function CallToActionBtns() {
         />
         <div className="absolute inset-0 flex justify-center items-center gap-6">
           <button
-            onClick={handleClicks}
+            onClick={() => track("call-cafe-btn", {subdomain: "cafetwentsix"})}
             className="rounded-lg px-11 py-1 text-center bg-gray-50 text-black text-sm cursor-pointer hover:bg-zinc-800 hover:text-white drop-shadow-sm hover:drop-shadow-md hover:scale-105 transition-all duration-400"
           >
             <a href="tel:+447342888171" aria-label="Call Café Twenty Six">
@@ -28,7 +23,7 @@ export default function CallToActionBtns() {
             </a>
           </button>
           <button
-            onClick={handleClicks}
+            onClick={() => track("whatsapp-btn", {subdomain: "cafetwentsix"})}
             className="rounded-lg px-7 py-1 text-center text-shadow-lg text-sm bg-green-700 text-white hover:bg-green-500 cursor-pointer drop-shadow-md hover:drop-shadow-lg hover:scale-105 transition-all duration-400 "
           >
             <a

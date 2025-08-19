@@ -1,15 +1,8 @@
 import instagram from "../assets/instagram.svg"
-import { trackEvent } from "@/lib/utils";
 import { track } from "@vercel/analytics";
 
-function handleClicks() {
-  return (
-    track("button_clicked"), trackEvent("click", "call_button", "cafetwentysix")
-)
-}
-
-
 const openDirections = () => {
+  track("findus-btn", {subdomain: "cafetwentsix"});
   const destination = encodeURIComponent("51.5352219,-0.3118847,18.21");
   const mapUrl = `https://www.google.com/maps/dir/?api=1&destination=${destination}`;
   window.open(mapUrl, "_blank");
@@ -20,12 +13,12 @@ export default function FindUs() {
   return (
     <div className="h-full mt-5 flex flex-col justify-center items-center ">
       <div className="mb-3 mt-3 text-sm">
-        <a href="https://www.instagram.com/cafetwentysix?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src={instagram} alt="instagram" className="w-10 h-10 mb-5" /></a>
+        <a href="https://www.instagram.com/cafetwentysix?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+        onClick={() => track("instagram-btn",{referrer: document.referrer}, {subdomain: "cafetwentsix"})}
+        ><img src={instagram} alt="instagram" className="w-10 h-10 mb-5" /></a>
       </div>
       <button
-        onClick={() => {
-          openDirections(), handleClicks();
-        }}
+        onClick={() => {openDirections() }}
         aria-label="Find us on google maps"
         className="relative mb-5 rounded-lg px-11 py-1 text-center bg-zinc-800 text-white text-sm cursor-pointer hover:bg-gray-50 hover:text-black drop-shadow-sm hover:drop-shadow-md hover:scale-105 transition-all duration-400"
       >

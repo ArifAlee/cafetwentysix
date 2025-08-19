@@ -104,6 +104,7 @@ export default function MenuItems() {
         <h1 className="text-xl m-auto py-1"> Daily Special Meals </h1>
         <span className=" border rounded-3xl bg-neutral-300 hover:bg-green-700 hover:text-white transition-all duration-300 px-3 m-auto text-xs text-zinc-900 italic -mt-1 mb-1">
           <a
+            onClick={() => track("daily-specials-btn", {subdomain: "cafetwentsix"})}
             href="https://wa.me/447342888171?text=Hi%20Tariq%2C%20what%20is%20today%27s%20special%3F"
             target="_blank"
             rel="noopener noreferrer"
@@ -124,6 +125,7 @@ export default function MenuItems() {
         <h1 className="text-xl m-auto py-1"> Request Any Meal</h1>
         <span className=" border rounded-3xl bg-neutral-300 hover:bg-green-700 hover:text-white transition-all duration-300 px-3 m-auto text-xs text-zinc-900 italic -mt-1 mb-1">
           <a
+            onClick={() => track("request-dish-btn", {subdomain: "cafetwentsix"})}
             href="https://wa.me/447342888171?text=Hi%20Tariq%2C%20could%20I%20request%20a%20specific%20dish%20in%20advance%3F"
             target="_blank"
             rel="noopener noreferrer"
