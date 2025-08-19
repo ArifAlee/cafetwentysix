@@ -1,7 +1,7 @@
 // import { CarouselOrientation } from "./Carousel";
 import { useEffect } from "react";
 import birdsEyeImg from "../assets/birds-eye-img.JPG";
-import { track,  } from "@vercel/analytics";
+import { track,  } from "@vercel/analytics/react";
 
 export default function CallToActionBtns() {
   return (

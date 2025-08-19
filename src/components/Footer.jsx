@@ -1,3 +1,5 @@
+import { track } from "@vercel/analytics/react"
+
 export default function Footer(){
     return(
         <footer className="w-full h-full text-center mt-10 text-xs text-neutral-700">

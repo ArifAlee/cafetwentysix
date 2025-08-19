@@ -1,4 +1,6 @@
 import burdi from "../assets/burdi.png";
+import { track } from "@vercel/analytics/react"
+
 export default function Loyalty() {
   const color = { color: "#01AAE6" };
   return (

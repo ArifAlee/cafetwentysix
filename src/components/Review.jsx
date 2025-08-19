@@ -1,4 +1,6 @@
 
+import { track } from "@vercel/analytics/react"
+
 export default function Review() {
   return (
     <div className="mb-5">
