@@ -1,5 +1,5 @@
 
-import { track } from "@vercel/analytics/react"
+import { track } from "../lib/utils";
 
 export default function Review() {
   return (

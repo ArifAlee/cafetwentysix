@@ -1,5 +1,5 @@
 import coffee from "../assets/coffee.PNG";
-import { track } from "@vercel/analytics/react";
+import { track } from "../lib/utils";
 
 
 export default function Catering() {

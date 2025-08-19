@@ -1,5 +1,5 @@
 import instagram from "../assets/instagram.svg"
-import { track } from "@vercel/analytics/react/react";
+import { track } from "../lib/utils";
 
 const openDirections = () => {
   track("findus-btn", {subdomain: "cafetwentsix"});

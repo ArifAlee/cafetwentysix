@@ -1,6 +1,6 @@
 import sandwichMilkshake from "../assets/sandwich-and-milkshake-cropped.JPG";
 import sandwich from "../assets/sandwich.JPG";
-import { track } from "@vercel/analytics/react"
+import { track } from "../lib/utils";
 
 export default function ViewMenuBtn() {
   return (
