@@ -5,13 +5,13 @@ const sandwichesArr = [
   {
     key: uuid(),
     name: "Café Twenty Six Special",
-    filling: "med/hot spicy chicken - salad - cheddar",
+    filling: "med hot / spicy chicken - salad - cheddar",
     price: 6.0,
   },
   {
     key: uuid(),
     name: "Chicken / Lamb Shawarma",
-    filling: "med/hot spicy - salad ",
+    filling: "med spicy / hot - salad ",
     price: 6.0,
   },
   {
@@ -23,7 +23,7 @@ const sandwichesArr = [
   {
     key: uuid(),
     name: "Smash Burgers",
-    filling: "med/hot spicy beef - cheese  ",
+    filling: "med/hot spicy beef - cheese ",
     price: 5,
   },
   {
@@ -138,7 +138,7 @@ export default function MenuItems() {
      "
       >
         Craving something special? From melt-in-your-mouth slow-cooked lamb
-        shoulder to the fragrant Maqluba, simply request your dish in advance
+        shoulder to the fragrant, Maqluba, simply request your dish in advance
         and we’ll prepare it fresh just for you.
       </p>
       <p

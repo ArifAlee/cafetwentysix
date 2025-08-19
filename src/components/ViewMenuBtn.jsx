@@ -1,5 +1,5 @@
-import sandwichMilkshake from "../assets/sandwich-and-milkshake-cropped.JPG";
-import sandwich from "../assets/sandwich.JPG";
+import sandwichMilkshake from "../assets/sandwich-and-milkshake-cropped.jpg";
+import sandwich from "../assets/sandwich.jpg";
 
 export default function ViewMenuBtn() {
   return (
