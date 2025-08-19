@@ -8,6 +8,7 @@ export default function Loyalty() {
       <a
         href="https://play.google.com/store/apps/details?id=locale.ewallet&hl=en_GB&pli=1"
         onClick={() => track("enquire-btn", { subdomain: "cafetwentsix" })}
+        className="flex justify-center items-center"
       >
         <img src={burdi} alt="burdi loyalty" className="w-1/4 md:w-1/10" />
         <span className="text-sm">
