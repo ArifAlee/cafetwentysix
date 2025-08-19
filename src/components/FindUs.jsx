@@ -1,4 +1,12 @@
 import instagram from "../assets/instagram.svg"
+import { trackEvent } from "@/lib/utils";
+import { track } from "@vercel/analytics";
+
+function handleClicks() {
+  return (
+    track("button_clicked"), trackEvent("click", "call_button", "cafetwentysix")
+)
+}
 
 
 const openDirections = () => {
@@ -16,7 +24,7 @@ export default function FindUs() {
       </div>
       <button
         onClick={() => {
-          openDirections();
+          openDirections(), handleClicks();
         }}
         aria-label="Find us on google maps"
         className="relative mb-5 rounded-lg px-11 py-1 text-center bg-zinc-800 text-white text-sm cursor-pointer hover:bg-gray-50 hover:text-black drop-shadow-sm hover:drop-shadow-md hover:scale-105 transition-all duration-400"
