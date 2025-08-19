@@ -14,11 +14,11 @@ export default function FindUs() {
     <div className="h-full mt-5 flex flex-col justify-center items-center ">
       <div className="mb-3 mt-3 text-sm">
         <a href="https://www.instagram.com/cafetwentysix?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-        onClick={() => track("instagram-btn",{referrer: document.referrer}, {subdomain: "cafetwentsix"})}
+        onClick={() => track("instagram-btn", {subdomain: "cafetwentsix"})}
         ><img src={instagram} alt="instagram" className="w-10 h-10 mb-5" /></a>
       </div>
       <button
-        onClick={() => {openDirections() }}
+        onClick={() => openDirections() }
         aria-label="Find us on google maps"
         className="relative mb-5 rounded-lg px-11 py-1 text-center bg-zinc-800 text-white text-sm cursor-pointer hover:bg-gray-50 hover:text-black drop-shadow-sm hover:drop-shadow-md hover:scale-105 transition-all duration-400"
       >
