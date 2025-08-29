@@ -19,7 +19,6 @@ export default function Catering() {
           We can cater for your office parties, birthdays and events.
         </p>
         <span className="underline underline-offset-2 decoration-white text-sm text-green-800 drop-shadow-2xl">
-          <button onClick={() => track("enquire-btn", {subdomain: "cafetwentsix"})}>
           <a
             href="https://wa.me/447342888171?text=Hi%20Tariq%2C%20I%27d%20like%20to%20enquire%20about%20catering%20for%20an%20event."
             target="_blank"
@@ -28,7 +27,6 @@ export default function Catering() {
           >
             Enquire today.
           </a>
-          </button>
         </span>
       </div>
     </div>

@@ -1,118 +1,23 @@
 import Items from "./Items";
-import { v4 as uuid } from "uuid";
-import { track } from "../lib/utils";
-
-
-const sandwichesArr = [
-  {
-    key: uuid(),
-    name: "Café Twenty Six Special",
-    filling: "med hot / spicy chicken - salad - cheddar",
-    price: 6.0,
-  },
-  {
-    key: uuid(),
-    name: "Chicken / Lamb Shawarma",
-    filling: "med spicy / hot - salad ",
-    price: 8.50,
-  },
-  {
-    key: uuid(),
-    name: "Halloumi Sandwich",
-    filling: "halloumi - fried egg - add avocado £7.50",
-    price: 6.0,
-  },
-  {
-    key: uuid(),
-    name: "Smash Burgers",
-    filling: "med/hot spicy beef - cheese - choose 1/2/3 patties ",
-    price: 5.0,
-  },
-  {
-    key: uuid(),
-    name: "Burger Meals",
-    filling: "fries - drink - choose 1/2/3 patties ",
-    price: 9.0,
-  },
-  {
-    key: uuid(),
-    name: "Falafel Wrap",
-    filling: "falafel - salad - tahini sauce",
-    price: 5.50,
-  },
-  {
-    key: uuid(),
-    name: "Large Club Sandwich & Drink",
-    filling: "chicken - lettuce - tomato - mayo ",
-    price: 8.50,
-  },
-  {
-    key: uuid(),
-    name: "Greek Salad",
-    filling:
-      " tomatoes, cucumbers, red onion, olives, feta cheese - special dressing ",
-    price: 6.0,
-  },
-];
-
-const specialMeals = [
-  {
-    key: uuid(),
-    name: "Roasted Lamb and Rice w/ Pepper Sauce",
-  },
-  {
-    key: uuid(),
-    name: "Lamb Cubes and Okra Rice w/ Tomato Sauce",
-  },
-  {
-    key: uuid(),
-    name: "Mixed Grill - Salad & Chips",
-  },
-  {
-    key: uuid(),
-    name: "Steak & Chips",
-  },
-  {
-    key: uuid(),
-    name: "Spicy Chicken Burger & Chips",
-  },
-  {
-    key: uuid(),
-    name: "Creamy Chicken Mushroom & Rice",
-  },
-  {
-    key: uuid(),
-    name: "Lentil Soup / Mushroom Soup",
-  },
-];
-const request = [
-  {
-    key: uuid(),
-    name: "Sausage & Egg Breakfast",
-    filling: "sausage - egg",
-    price: 4.8,
-  },
-];
+import { sandwichesArr, specialMeals } from "@/lib/menuData";
 
 export default function MenuItems() {
   return (
-    <section className="relative">
+    <section id="menu" className="relative">
       {/* SANDWICHES */}
       <div className="flex font-poppins justify-between bg-neutral-200 text-zinc-900 border border-b-neutral-300 shadow-xl fade-up">
         <h1 className="text-xl m-auto py-1"> Specials</h1>
       </div>
       <div>
         {sandwichesArr.map((sandwich, index) => (
-          <Items key={sandwich.key} sandwich={sandwich} index={index} />
+          <Items key={sandwich.name.slice(0,5)} sandwich={sandwich} index={index} />
         ))}
       </div>
-
       {/* DAILY SPECIALS MEALS */}
       <div className="flex flex-col font-poppins bg-neutral-200 text-zinc-900 border border-b-neutral-300 shadow-xl fade-up">
         <h1 className="text-xl m-auto py-1"> Daily Special Meals </h1>
         <span className=" border rounded-3xl bg-neutral-300 hover:bg-green-700 hover:text-white transition-all duration-300 px-3 m-auto text-xs text-zinc-900 italic -mt-1 mb-1">
           <a
-            onClick={() => track("daily-specials-btn", {subdomain: "cafetwentsix"})}
             href="https://wa.me/447342888171?text=Hi%20Tariq%2C%20what%20is%20today%27s%20special%3F"
             target="_blank"
             rel="noopener noreferrer"
@@ -124,7 +29,7 @@ export default function MenuItems() {
       </div>
       <div>
         {specialMeals.map((item, index) => (
-          <Items key={item.key} sandwich={item} index={index} />
+          <Items key={item.name.slice(0,5)} sandwich={item} index={index} />
         ))}
       </div>
       {/* REQUEST ANY MEALS */}
@@ -133,7 +38,6 @@ export default function MenuItems() {
         <h1 className="text-xl m-auto py-1"> Request Any Meal</h1>
         <span className=" border rounded-3xl bg-neutral-300 hover:bg-green-700 hover:text-white transition-all duration-300 px-3 m-auto text-xs text-zinc-900 italic -mt-1 mb-1">
           <a
-            onClick={() => track("request-dish-btn", {subdomain: "cafetwentsix"})}
             href="https://wa.me/447342888171?text=Hi%20Tariq%2C%20could%20I%20request%20a%20specific%20dish%20in%20advance%3F"
             target="_blank"
             rel="noopener noreferrer"
